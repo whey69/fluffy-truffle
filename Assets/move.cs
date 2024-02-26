@@ -19,6 +19,7 @@ class move : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody>();
         mr = gameObject.GetComponent<MeshRenderer>();
+        curMaterial = materials[5];
     }
 
     void Update()
@@ -49,7 +50,7 @@ class move : MonoBehaviour
                 material = materials[Random.Range(0, materials.Count)];
             }
             newPlat.GetComponent<MeshRenderer>().material = material;
-            if (Random.Range(1, 3) == 2)
+            if (Random.Range(1, 2) == 1)
             {
                 GameObject newball = Instantiate(ballPrefab);
                 newball.transform.position = curPos + new Vector3(0, 1, 0);

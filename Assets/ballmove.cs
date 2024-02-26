@@ -28,6 +28,7 @@ public class ballmove : MonoBehaviour
                 obj.GetComponent<BoxCollider>().isTrigger = true;
             }
             // collision.gameObject.GetComponent<move>().Die();
+            GameObject.Destroy(gameObject);
         }
     }
 }
